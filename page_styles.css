@@ -1,5 +1,190 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap');
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f8f5ee;
+    color:#333;
+    font-family:Georgia, serif;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:#c8b08d;
+    padding:20px 60px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:2.5rem;
+    font-weight:bold;
+    color:white;
+}
+
+.nav-links{
+    display:flex;
+    gap:40px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:1.2rem;
+}
+
+#darkModeBtn{
+    padding:8px 12px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    max-width:1200px;
+    margin:60px auto;
+
+    display:flex;
+    gap:50px;
+
+    align-items:center;
+}
+
+.book-cover{
+    width:250px;
+    border-radius:10px;
+}
+
+.book-info h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.book-info p{
+    margin-bottom:10px;
+    font-size:1.1rem;
+}
+
+.start-btn{
+    margin-top:20px;
+
+    background:#8b4513;
+    color:white;
+
+    border:none;
+    padding:15px 30px;
+
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* SYNOPSIS */
+
+.synopsis{
+    max-width:1000px;
+    margin:60px auto;
+}
+
+.synopsis h2{
+    margin-bottom:20px;
+}
+
+/* CHARACTERS */
+
+#characters{
+    max-width:1000px;
+    margin:60px auto;
+}
+
+.character-grid{
+    display:flex;
+    gap:30px;
+    margin-top:20px;
+}
+
+.character-card{
+    flex:1;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+/* CONTENTS */
+
+#contents{
+    max-width:1000px;
+    margin:60px auto;
+}
+
+.chapter-grid{
+    margin-top:20px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+}
+
+.chapter-grid a{
+    background:white;
+
+    text-align:center;
+
+    padding:15px;
+
+    text-decoration:none;
+
+    color:#333;
+
+    border-radius:8px;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+.chapter-grid a:hover{
+    background:#f1ede5;
+}
+
+/* DARK MODE */
+
+.dark-mode{
+    background:#1d1d1d;
+    color:white;
+}
+
+.dark-mode .navbar{
+    background:#333;
+}
+
+.dark-mode .character-card,
+.dark-mode .chapter-grid a{
+    background:#2b2b2b;
+    color:white;
+}
+
+.dark-mode .chapter-grid a:hover{
+    background:#444;
+}
+
+.dark-mode .reading-panel {
+    background: #2b2b2b;
+    color: white;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -47,6 +232,9 @@ body {
 }
 
 /* Dropdown */
+.dropdown-content {
+    transform: translateX(-100px);
+}
 
 .dropdown-content {
     display: none;
@@ -55,26 +243,36 @@ body {
     left: 0;
 
     background: white;
-    min-width: 200px;
+    width: 600px;
 
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,.2);
+    padding: 15px;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 
     z-index: 999;
-}
 
-.dropdown-content a {
-    display: block;
-    padding: 12px 15px;
-    color: black;
-}
-
-.dropdown-content a:hover {
-    background: #f3f3f3;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: grid;
+}
+
+.dropdown-content a {
+    font-size: 14px;          /* smaller text */
+    text-align: center;
+    padding: 8px 4px;
+
+    color: #333;
+    text-decoration: none;
+
+    border-radius: 5px;
+}
+
+.dropdown-content a:hover {
+    background: #f5f5f5;
 }
 
 /* Reading Page */
@@ -196,4 +394,34 @@ body.calibre {
     p.calibre1 {
         font-size: 19px;
     }
+}
+
+.nav-btn {
+    background: white;
+    color: #7b5c3f;
+
+    border: 2px solid #c8b08d;
+
+    border-radius: 50px;
+
+    padding: 12px 30px;
+
+    font-size: 15px;
+
+    transition: all .3s;
+}
+
+.nav-btn:hover {
+    background: #c8b08d;
+    color: white;
+}
+
+.dark-mode .nav-btn {
+    background: #333;
+    color: white;
+    border: 1px solid #666;
+}
+
+.dark-mode .nav-btn:hover {
+    background: #555;
 }
