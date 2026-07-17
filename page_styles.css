@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif SC', serif;
+    background-color: #f5f1e8;
+    color: #333;
+    line-height: 2;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #c4ae8c;
+    padding: 20px 50px;
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Dropdown */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background: white;
+    min-width: 200px;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.2);
+
+    z-index: 999;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 15px;
+    color: black;
+}
+
+.dropdown-content a:hover {
+    background: #f3f3f3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Reading Page */
+.chapter-container {
+    background: white;
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.chapter-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #8b4513;
+}
+
+.chapter-content {
+    font-size: 22px;
+    line-height: 2.2;
+    text-align: justify;
+}
+
+/* Buttons */
+.btn {
+    background: #8b4513;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #6f3410;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    margin-top: 40px;
+}
+/* Overall Page */
+body.calibre {
+    background-color: #f7f3eb;
+    font-family: "Microsoft YaHei", "PingFang SC", "Noto Serif SC", serif;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    line-height: 2.2;
+}
+
+/* Chapter Title */
+h2.calibre1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #8b4513;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #d8c6a8;
+}
+
+/* Paragraphs */
+p.calibre1 {
+    font-size: 22px;
+    text-indent: 2em;
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+/* Reading Container Effect */
+body.calibre {
+    background: #f7f3eb;
+}
+
+.reading-panel {
+    background: #fffdf8;
+    padding: 60px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Selection Color */
+::selection {
+    background: #d8c6a8;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1ece2;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b8a07c;
+    border-radius: 5px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body.calibre {
+        padding: 20px;
+    }
+
+    h2.calibre1 {
+        font-size: 28px;
+    }
+
+    p.calibre1 {
+        font-size: 19px;
+    }
+}

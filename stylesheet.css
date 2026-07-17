@@ -1,0 +1,19 @@
+.calibre {
+    display: block;
+    font-size: 1em;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 5pt
+    }
+.calibre1 {
+	text-indent:2em;
+	line-height:150%;
+    display: block;
+    margin: 20px 0
+    }
+.softbreak {
+    display: block;
+    page-break-before: avoid;
+    text-align: center;
+    margin: 0.5em 0 1em
+    }
